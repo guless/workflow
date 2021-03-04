@@ -17,7 +17,7 @@
         "test": "jest --passWithNoTests",
         "compile": "npm run compile:ts && npm run compile:assets",
         "compile:ts": "tsc -p src/tsconfig.json --declaration --outDir lib/",
-        "compile:assets": "copy \"src/**/*\" \"!src/tsconfig.json\" \"!src/**/*.{ts,tsx}\" lib",
+        "compile:assets": "copy \"src/**/*\" \"!src/tsconfig.json\" \"!src/**/*.{ts,tsx}\" \"src/**/*.d.ts\" lib/",
         "bundle": "env-cmd webpack build --config scripts/webpack/webpack.bundle.configuration.ts",
         "examples": "env-cmd webpack serve --config scripts/webpack/webpack.examples.configuration.ts",
         "build": "env-cmd webpack build --config scripts/webpack/webpack.server.configuration.ts",
